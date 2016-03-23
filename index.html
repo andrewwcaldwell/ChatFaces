@@ -1,10 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-   <title>ChatFaces</title>
-   <script src="js/app.js"></script>
+    <title>index.html</title>
+    <link rel="stylesheet" href="css/style.css"/> 
+    <script src="js/app.js"></script>
 </head>
 <body>
-
+    <div class="wrapper">
+        <div class="title">
+            <img class = "logo" src="resource/monkey.jpg"/>
+            <div class="organizer">
+                <h1>Howler 2.0</h1>
+                <p>Howler is a free to use chat app. So go bananas!</p>
+                <div class="whoAmI">
+                    <h2>Tell us who you are?</h2>
+                    <input class="user" type ="text" id="user" placeholder="Represent..."/>
+                    <button class="update" id="update">Refresh Feed</button>
+                </div>
+            </div>
+        </div>
+        <ul id="parlance"></ul>
+        <div class="chat">
+            <input class="message" type ="text" id="message" placeholder="Type here..."/>
+            <div class="buttons">
+                <button class="submit" id="submit">Send</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
