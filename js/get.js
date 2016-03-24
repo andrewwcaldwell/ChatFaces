@@ -71,17 +71,17 @@ module.exports = function get() {
                var name = document.createElement('h3');
                var memo = document.createElement('h4');
                var bubble = document.createElement('li');
-               name.textContent = echo[i].user + '  says...';
-               memo.textContent = echo[i].message;
+               name.textContent = data[i].user + '  says...';
+               memo.textContent = data[i].message;
                bubble.appendChild(name);
                bubble.appendChild(memo);
                 
-               if (echo[i].user === 'Andrew') { bubble.classList.add('left');
+               if (data[i].user === 'Andrew') { bubble.classList.add('left');
                } else { 
                    bubble.classList.add('right'); 
                }
                
-               if (echo[i].user === '') {
+               if (data[i].user === '') {
                    name.textContent = 'Anonymous says...';
                }
                parent.appendChild(bubble);
