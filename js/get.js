@@ -68,13 +68,23 @@ module.exports = function get() {
          if (data.length > count) {
             // set position for loop so that we don't post the same material
             for (var i = count; i < data.length; i++) {
-            /*==============================================
-
-
-                        [ ANDREW'S CODE HERE ]
-
-
-            ==============================================*/
+               var name = document.createElement('h3');
+               var memo = document.createElement('h4');
+               var bubble = document.createElement('li');
+               name.textContent = echo[i].user + '  says...';
+               memo.textContent = echo[i].message;
+               bubble.appendChild(name);
+               bubble.appendChild(memo);
+                
+               if (echo[i].user === 'Andrew') { bubble.classList.add('left');
+               } else { 
+                   bubble.classList.add('right'); 
+               }
+               
+               if (echo[i].user === '') {
+                   name.textContent = 'Anonymous says...';
+               }
+               parent.appendChild(bubble);
             }
             // scroll position set to bottom
             servedMsgs.scrollTop = servedMsgs.scrollHeight;
