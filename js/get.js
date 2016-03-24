@@ -71,10 +71,13 @@ module.exports = function get() {
                var name = document.createElement('h3');
                var memo = document.createElement('h4');
                var bubble = document.createElement('li');
+               var tmstmp = document.createElement('small');
                name.textContent = data[i].user + '  says...';
                memo.textContent = data[i].message;
+               tmstmp.textContent = setTimeStmp(data[i].when);
                bubble.appendChild(name);
                bubble.appendChild(memo);
+               bubble.appendChild(tmstmp);
                 
                if (data[i].user === 'Andrew') { bubble.classList.add('left');
                } else { 
