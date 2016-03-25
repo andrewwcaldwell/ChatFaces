@@ -1,5 +1,5 @@
 
-module.exports = function send() {
+module.exports = function sendMsg() {
 
    var requestPOST = new XMLHttpRequest();
    requestPOST.open('POST', 'http://chat.queencityiron.com/messages');
