@@ -1,5 +1,5 @@
 
-module.exports = function get() { 
+module.exports = function getMsgs() { 
 
    // format timestamp
    function setTimeStmp(str) {
@@ -94,7 +94,7 @@ module.exports = function get() {
                }
             }
             // scroll position set to bottom
-            servedMsgs.scrollTop = servedMsgs.scrollHeight;
+            parent.scrollTop = parent.scrollHeight;
          }
          // set count for next iteration
          count = data.length;
