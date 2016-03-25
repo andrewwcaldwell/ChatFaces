@@ -3,13 +3,24 @@
 @import 'neat/neat';
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 
+//___ COLORS: ___________________________________
+
+
+
+
+//___ MIXINS: ___________________________________
+
+
+
+
+/*----- Begin Styling -----*/
 
 body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     font-family: 'Poiret One', cursive;
-    background-image: url('../resource/jungle.jpg');
+    background-image: url(../resource/jungle.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
