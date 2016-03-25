@@ -3,17 +3,6 @@
 @import 'neat/neat.scss';
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 
-//___ COLORS: ___________________________________
-
-
-
-
-//___ MIXINS: ___________________________________
-
-
-
-
-/*----- Begin Styling -----*/
 
 body {
     box-sizing: border-box;
@@ -100,7 +89,6 @@ p {
     
     //border: 1px solid black;
 }
-
 h2 {
     height: 34px;
     width: 32%;
@@ -136,7 +124,6 @@ ul {
     background-color: #f2f2f2;
     border-radius: 10px;
 }
-
 li { 
     list-style-type: none;
     display: flex;
@@ -160,6 +147,12 @@ h4 {
     font-size: 20px;
     font-weight: 400;
     color: white; 
+    margin: 0;
+}
+small{
+    font-size: 15px;
+    color: white;
+    height: 20%;
     margin: 0;
 }
 .right {
@@ -193,16 +186,6 @@ h4 {
     border: 1px solid lightgray;
     border-radius: 3px;
 }
-.buttons {
-    display: flex;
-    flex-direction: row;
-    height: 30px;
-    width: 200px;
-    
-    //background-color: #f2f2f2;
-    //border: 1px solid black;
-}
-
 button {
     color: white;
     font-family: 'Poiret One', cursive;
@@ -213,23 +196,9 @@ button {
     border-color: #E5E5E5 #999999 #999999 #E5E5E5;
     border-radius: 5px;
 }
-
 .submit {
     background-color: #71980b;
     width: 100%;
     height: 40px;
     margin: 0 10px;
 }
-
-
-.update {
-    background-color: #277A9B;
-    //width: 100%;
-    height: 40px;
-    width: 20%;
-    margin-right: 10px;
-    margin-top: 6px;
-
-}
-
-
