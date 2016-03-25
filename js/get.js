@@ -52,8 +52,8 @@ module.exports = function get() {
 
    // counter for getRequest.onload()
    var count = 0;
-   // parent element containing served messages
-   var servedMsgs = document.getElementById('served-messages');
+   // container (parent element) for retrieved chat
+   var parent = document.getElementById('parlance');
 
    var getRequest = new XMLHttpRequest();
 
@@ -68,18 +68,23 @@ module.exports = function get() {
          if (data.length > count) {
             // set position for loop so that we don't post the same material
             for (var i = count; i < data.length; i++) {
+               
+               var bubble = document.createElement('li');
                var name = document.createElement('h3');
                var memo = document.createElement('h4');
-               var bubble = document.createElement('li');
                var tmstmp = document.createElement('small');
+               
                name.textContent = data[i].user + '  says...';
                memo.textContent = data[i].message;
                tmstmp.textContent = setTimeStmp(data[i].when);
+               
                bubble.appendChild(name);
                bubble.appendChild(memo);
                bubble.appendChild(tmstmp);
-                
-               if (data[i].user === 'Andrew') { bubble.classList.add('left');
+               parent.appendChild(bubble);
+
+               if (data[i].user === 'Andrew' || data[i].user === 'Brad') 
+                  { bubble.classList.add('left');
                } else { 
                    bubble.classList.add('right'); 
                }
@@ -87,7 +92,6 @@ module.exports = function get() {
                if (data[i].user === '') {
                    name.textContent = 'Anonymous says...';
                }
-               parent.appendChild(bubble);
             }
             // scroll position set to bottom
             servedMsgs.scrollTop = servedMsgs.scrollHeight;
