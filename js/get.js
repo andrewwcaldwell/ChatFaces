@@ -1,6 +1,8 @@
 
 module.exports = function getMsgs() { 
 
+   var tmStmp  = require('./tmStmp');
+   
    // counter for getRequest.onload()
    var count = 0;
    // container (parent element) for retrieved chat
@@ -27,7 +29,7 @@ module.exports = function getMsgs() {
                
                name.textContent = data[i].user + '  says...';
                memo.textContent = data[i].message;
-               tmstmp.textContent = setTimeStmp(data[i].when);
+               tmstmp.textContent = tmStmp.setTmStmp(data[i].when);
                
                bubble.appendChild(name);
                bubble.appendChild(memo);

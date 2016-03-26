@@ -39,7 +39,7 @@ gulp.task('js', function () {
     .pipe(jslint({browser: true, sloppy: true, node: true}))
     gulp.src('./js/send.js')
     .pipe(jslint({browser: true, sloppy: true, node: true}))
-    //*********************************************************//
+    //*********************************************************//   
     return gulp.src('./js/app.js')
         .pipe(gulpBrowser.browserify())
         .pipe(uglify())
