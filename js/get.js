@@ -2,6 +2,7 @@
 module.exports = function getMsgs() { 
 
    var tmStmp  = require('./tmStmp');
+   var link    = require('./link');
    
    // counter for getRequest.onload()
    var count = 0;
