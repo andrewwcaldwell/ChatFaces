@@ -1,3 +1,5 @@
+
+module.exports = function tmStmp() { 
    // format timestamp
    function setTimeStmp(str) {
    
@@ -45,4 +47,5 @@
       relStmp = month + '/' + day + '/' + year + ', ' + hours + ':' + minutes + period;
    }
    return relStmp;
-}
+   }
+};
