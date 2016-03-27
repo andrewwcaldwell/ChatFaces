@@ -35,11 +35,17 @@ gulp.task('js', function () {
     /*/ comment out this block - linter too strict ***************
     gulp.src('./js/tmStmp.js')
     .pipe(jslint({browser: true, sloppy: true, node: true}))
+>>>>>>> master
     gulp.src('./js/get.js')
+    .pipe(jslint({browser: true, sloppy: true, node: true}))
+    gulp.src('./js/link.js')
     .pipe(jslint({browser: true, sloppy: true, node: true}))
     gulp.src('./js/send.js')
     .pipe(jslint({browser: true, sloppy: true, node: true}))
-    //*********************************************************///   
+<<<<<<< HEAD
+    gulp.src('./js/tmStmp.js')
+    .pipe(jslint({browser: true, sloppy: true, node: true}))
+    //*********************************************************/
     return gulp.src('./js/app.js')
         .pipe(gulpBrowser.browserify())
         .pipe(uglify())

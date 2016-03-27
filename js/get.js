@@ -2,6 +2,7 @@
 module.exports = function getMsgs() { 
 
    var tmStmp  = require('./tmStmp');
+   var link    = require('./link');
    
    // counter for getRequest.onload()
    var count = 0;
@@ -28,7 +29,7 @@ module.exports = function getMsgs() {
                var tmstmp = document.createElement('small');
                
                name.textContent = data[i].user + '  says...';
-               memo.textContent = data[i].message;
+               memo.innerHTML = link.generateLink(data[i].message);
                tmstmp.textContent = tmStmp.setTmStmp(data[i].when);
                
                bubble.appendChild(name);
