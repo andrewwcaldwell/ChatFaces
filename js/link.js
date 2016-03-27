@@ -1,7 +1,7 @@
 
 module.exports = {
    // create hyperlink
-   generateLink: function g(str) {
+   generateLink: function(str) {
 
       // list of top 20 tlds with most page results = .io
       var commonTld = ['.com', '.org', '.edu', '.gov', '.uk', '.net', '.ca', '.de', '.jp', '.fr', '.au', '.us', '.ru', '.ch', '.it', '.nl', '.se', '.no', '.es', '.mil', '.io'];
