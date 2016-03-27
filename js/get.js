@@ -29,7 +29,9 @@ module.exports = function getMsgs() {
                var tmstmp = document.createElement('small');
                
                name.textContent = data[i].user + '  says...';
+                // Insert of link recognize and replace function.
                memo.innerHTML = link.generateLink(data[i].message);
+                // Insert of timestamp function.
                tmstmp.textContent = tmStmp.setTmStmp(data[i].when);
                
                bubble.appendChild(name);
