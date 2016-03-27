@@ -29,7 +29,7 @@ module.exports = function getMsgs() {
                var tmstmp = document.createElement('small');
                
                name.textContent = data[i].user + '  says...';
-               memo.textContent = data[i].message;
+               memo.textContent = link.generateLink(data[i].message);
                tmstmp.textContent = tmStmp.setTmStmp(data[i].when);
                
                bubble.appendChild(name);
