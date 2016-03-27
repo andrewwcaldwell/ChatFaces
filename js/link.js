@@ -1,7 +1,7 @@
 
 module.exports = {
    // create hyperlink
-   generateLink: function(str) {
+   generateLink: function g(str) {
 
       // list of top 20 tlds with most page results = .io
       var commonTld = ['.com', '.org', '.edu', '.gov', '.uk', '.net', '.ca', '.de', '.jp', '.fr', '.au', '.us', '.ru', '.ch', '.it', '.nl', '.se', '.no', '.es', '.mil', '.io'];
@@ -24,10 +24,10 @@ module.exports = {
          msg = str;
       } else {
          // format URL to clickable link
-         if (ref.indexOf('http://wwww.') === 0) {
+         if (ref.indexOf('http:') === 0) {
             link = '<a href="' + ref + '" target="_blank">' + ref + '</a>';
          } else if (ref.indexOf('www.') === 0) {
-            link = '<a href="http://.' + ref + '" target="_blank">' + ref + '</a>';
+            link = '<a href="http://' + ref + '" target="_blank">' + ref + '</a>';
          } else {
             link = '<a href="http://www.' + ref + '" target="_blank">' + ref + '</a>';
          }
