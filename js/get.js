@@ -32,6 +32,7 @@ module.exports = function getMsgs() {
                     var pic = document.createElement('img');
                     pic.src = img.results[0].user.picture.medium;
                     //console.log(pic.src);
+                    pic.classList.add('profile'); 
                    
                     // if key phrase invoked in message -   call weather
                     weather.callWeather(text.message);

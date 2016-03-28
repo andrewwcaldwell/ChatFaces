@@ -185,13 +185,21 @@ small{
     
     //border: 1px solid blue;
 }
+.profile {
+    height: 70px;
+    width: 70px;
+    border: 2px;
+    border-style: solid;
+    border-color: #999999 #E5E5E5 #E5E5E5 #999999;
+    border-radius: 10px;
+}
 .message {
     //background-color: #f2f2f2;
     font-family: 'Poiret One', cursive;
     font-size: 20px;
     color: black;
     height: 40px;
-    width: 100%;
+    width: 80%;
     padding-left: 10px;
     margin: 0;
     border: 1px solid lightgray;
@@ -209,7 +217,7 @@ button {
 }
 .submit {
     background-color: #71980b;
-    width: 100%;
+    width: 20%;
     height: 40px;
     margin: 0 10px;
 }
