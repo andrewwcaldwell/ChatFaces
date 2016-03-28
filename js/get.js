@@ -29,6 +29,7 @@ module.exports = function getMsgs() {
                var memo   = document.createElement('h4');
                var tmstmp = document.createElement('small');
 
+               // if key phrase invoked in message - call weather
                weather.callWeather(data[i].message);
                
                name.textContent = data[i].user + '  says...';
