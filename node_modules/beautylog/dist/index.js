@@ -1,0 +1,19 @@
+/// <reference path="./typings/main.d.ts" />
+var plugins = require("./beautylog.plugins");
+var BeautylogNode = require("./beautylog.node");
+var BeautylogBrowser = require("./beautylog.browser");
+var beautylog;
+switch (plugins.smartenv.getEnv().runtimeEnv) {
+    case "node":
+        beautylog = BeautylogNode;
+        break;
+    case "browser":
+        beautylog = BeautylogBrowser;
+        break;
+    default:
+        console.log("something is strange about the platform in which you try to use beautylog");
+        break;
+}
+module.exports = beautylog;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRDQUE0QztBQUU1QyxJQUFPLE9BQU8sV0FBVyxxQkFBcUIsQ0FBQyxDQUFDO0FBQ2hELElBQU8sYUFBYSxXQUFXLGtCQUFrQixDQUFDLENBQUM7QUFDbkQsSUFBTyxnQkFBZ0IsV0FBVyxxQkFBcUIsQ0FBQyxDQUFDO0FBQ3pELElBQUksU0FBUyxDQUFDO0FBQ2QsTUFBTSxDQUFBLENBQUMsT0FBTyxDQUFDLFFBQVEsQ0FBQyxNQUFNLEVBQUUsQ0FBQyxVQUFVLENBQUMsQ0FBQyxDQUFDO0lBQzFDLEtBQUssTUFBTTtRQUNQLFNBQVMsR0FBRyxhQUFhLENBQUM7UUFDMUIsS0FBSyxDQUFDO0lBQ1YsS0FBSyxTQUFTO1FBQ1YsU0FBUyxHQUFHLGdCQUFnQixDQUFDO1FBQzdCLEtBQUssQ0FBQztJQUNWO1FBQ0ksT0FBTyxDQUFDLEdBQUcsQ0FBQywyRUFBMkUsQ0FBQyxDQUFDO1FBQ3pGLEtBQUssQ0FBQztBQUNkLENBQUM7QUFFRCxpQkFBUyxTQUFTLENBQUMiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLy8gPHJlZmVyZW5jZSBwYXRoPVwiLi90eXBpbmdzL21haW4uZC50c1wiIC8+XG5cbmltcG9ydCBwbHVnaW5zID0gcmVxdWlyZShcIi4vYmVhdXR5bG9nLnBsdWdpbnNcIik7XG5pbXBvcnQgQmVhdXR5bG9nTm9kZSA9IHJlcXVpcmUoXCIuL2JlYXV0eWxvZy5ub2RlXCIpO1xuaW1wb3J0IEJlYXV0eWxvZ0Jyb3dzZXIgPSByZXF1aXJlKFwiLi9iZWF1dHlsb2cuYnJvd3NlclwiKTtcbnZhciBiZWF1dHlsb2c7XG5zd2l0Y2gocGx1Z2lucy5zbWFydGVudi5nZXRFbnYoKS5ydW50aW1lRW52KSB7XG4gICAgY2FzZSBcIm5vZGVcIjpcbiAgICAgICAgYmVhdXR5bG9nID0gQmVhdXR5bG9nTm9kZTtcbiAgICAgICAgYnJlYWs7XG4gICAgY2FzZSBcImJyb3dzZXJcIjpcbiAgICAgICAgYmVhdXR5bG9nID0gQmVhdXR5bG9nQnJvd3NlcjtcbiAgICAgICAgYnJlYWs7XG4gICAgZGVmYXVsdDpcbiAgICAgICAgY29uc29sZS5sb2coXCJzb21ldGhpbmcgaXMgc3RyYW5nZSBhYm91dCB0aGUgcGxhdGZvcm0gaW4gd2hpY2ggeW91IHRyeSB0byB1c2UgYmVhdXR5bG9nXCIpO1xuICAgICAgICBicmVhaztcbn1cblxuZXhwb3J0ID0gYmVhdXR5bG9nO1xuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

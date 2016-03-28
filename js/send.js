@@ -10,6 +10,6 @@ module.exports = function sendMsg() {
    }));
 
    // clear values after click
-   document.getElementById('user').value = '';
+   //document.getElementById('user').value = '';
    document.getElementById('message').value = '';
 };

@@ -24,7 +24,9 @@ module.exports = function getMsgs() {
                rand(data[i], function(img, text) {
                    //console.log(img.results[0].user.picture.medium);
                
-                    var bubble = document.createElement('li');
+                    var bubble = document.createElement('div'); 
+                    var chatter = document.createElement('li');
+                    var print = document.createElement('div');
                     var name   = document.createElement('h3');
                     var memo   = document.createElement('h4');
                     var tmstmp = document.createElement('small');
@@ -32,6 +34,9 @@ module.exports = function getMsgs() {
                     var pic = document.createElement('img');
                     pic.src = img.results[0].user.picture.medium;
                     //console.log(pic.src);
+                    pic.classList.add('profile'); 
+                    bubble.classList.add('bubble');
+                    print.classList.add('organizer');
                    
                     // if key phrase invoked in message -   call weather
                     weather.callWeather(text.message);
@@ -40,17 +45,22 @@ module.exports = function getMsgs() {
                     memo.innerHTML = link.generateLink(text.message);// Insert of timestamp function.
                     tmstmp.textContent = tmStmp.setTmStmp(text.when);
                 
+                    //bubble.appendChild(pic);
+                    print.appendChild(name);
+                    print.appendChild(tmstmp);
+                    print.appendChild(memo);   
                     bubble.appendChild(pic);
-                    bubble.appendChild(name);
-                    bubble.appendChild(memo);
-                    bubble.appendChild(tmstmp);
-                    parent.appendChild(bubble);
+                    bubble.appendChild(print);
+                    chatter.appendChild(bubble);
+                    parent.appendChild(chatter);
                    
                  //////  This section for frills.
                     if (text.user === 'Andrew' || text.user === 'Brad') { 
-                        bubble.classList.add('left');
+                        chatter.classList.add('left');
+                        bubble.classList.add('light');
                     } else { 
-                        bubble.classList.add('right'); 
+                        chatter.classList.add('right');
+                        bubble.classList.add('dark');
                     } // <== END Left Justify Class Tags for Username
                     if (text.user === '') {
                         name.textContent = 'Anonymous says...';
