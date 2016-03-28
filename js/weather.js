@@ -47,7 +47,7 @@ module.exports = {
             var data = JSON.parse(request.responseText);
 
             var weather = document.createElement('p');
-            weather.innerHTML = 'Current weather for ' + city + ':';
+            weather.innerHTML = 'Current weather for ' + city + ': ' + data.weather.description + ', ' + this.kToF(data.weather.main.temp) + '&deg;';
 
             var parent = document.getElementById('parlance');
             parent.appendChild(weather);
@@ -56,18 +56,3 @@ module.exports = {
       }
    },
 };
-// +++ final output ++
-// Current weather for <City>: broken clouds, 58degs.
-
-
-var example = {
-   "weather":[
-      {
-         "description":"broken clouds", // weather desciption
-      }
-   ],
-   "main":{
-      "temp":284.83, // current temp in kelvin
-   },
-};
-
