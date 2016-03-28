@@ -1,0 +1,11 @@
+/// <reference path="./typings/main.d.ts" />
+var plugins = {
+    beautylog: require("beautylog"),
+    through: require("through2"),
+    gutil: require("gulp-util"),
+    path: require("path"),
+    browserify: require("browserify")
+};
+module.exports = plugins;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImd1bHBicm93c2VyLnBsdWdpbnMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNENBQTRDO0FBQzVDLElBQUksT0FBTyxHQUFHO0lBQ1YsU0FBUyxFQUFFLE9BQU8sQ0FBQyxXQUFXLENBQUM7SUFDL0IsT0FBTyxFQUFFLE9BQU8sQ0FBQyxVQUFVLENBQUM7SUFDNUIsS0FBSyxFQUFFLE9BQU8sQ0FBQyxXQUFXLENBQUM7SUFDM0IsSUFBSSxFQUFFLE9BQU8sQ0FBQyxNQUFNLENBQUM7SUFDckIsVUFBVSxFQUFFLE9BQU8sQ0FBQyxZQUFZLENBQUM7Q0FDcEMsQ0FBQztBQUVGLGlCQUFTLE9BQU8sQ0FBQyIsImZpbGUiOiJndWxwYnJvd3Nlci5wbHVnaW5zLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8vIDxyZWZlcmVuY2UgcGF0aD1cIi4vdHlwaW5ncy9tYWluLmQudHNcIiAvPlxudmFyIHBsdWdpbnMgPSB7XG4gICAgYmVhdXR5bG9nOiByZXF1aXJlKFwiYmVhdXR5bG9nXCIpLFxuICAgIHRocm91Z2g6IHJlcXVpcmUoXCJ0aHJvdWdoMlwiKSxcbiAgICBndXRpbDogcmVxdWlyZShcImd1bHAtdXRpbFwiKSxcbiAgICBwYXRoOiByZXF1aXJlKFwicGF0aFwiKSxcbiAgICBicm93c2VyaWZ5OiByZXF1aXJlKFwiYnJvd3NlcmlmeVwiKVxufTtcblxuZXhwb3J0ID0gcGx1Z2luczsiXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
