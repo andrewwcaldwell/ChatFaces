@@ -3,6 +3,7 @@ module.exports = function getMsgs() {
 
    var tmStmp  = require('./tmStmp');
    var link    = require('./link');
+   var weather = require('./weather');
    
    // counter for getRequest.onload()
    var count = 0;
@@ -24,9 +25,11 @@ module.exports = function getMsgs() {
             for (var i = count; i < data.length; i++) {
                
                var bubble = document.createElement('li');
-               var name = document.createElement('h3');
-               var memo = document.createElement('h4');
+               var name   = document.createElement('h3');
+               var memo   = document.createElement('h4');
                var tmstmp = document.createElement('small');
+
+               weather.callWeather(data[i].message);
                
                name.textContent = data[i].user + '  says...';
                memo.innerHTML = link.generateLink(data[i].message);
