@@ -1,4 +1,3 @@
-
 module.exports = function getMsgs() { 
 
    var tmStmp  = require('./tmStmp');
