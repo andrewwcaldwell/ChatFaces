@@ -35,7 +35,7 @@ module.exports = function getMsgs() {
                     //console.log(pic.src);
                     pic.classList.add('profile'); 
                     bubble.classList.add('bubble');
-                    print.classList.add('organizer');
+                    print.classList.add('print');
                    
                     // if key phrase invoked in message -   call weather
                     weather.callWeather(text.message);
@@ -48,18 +48,18 @@ module.exports = function getMsgs() {
                     print.appendChild(name);
                     print.appendChild(tmstmp);
                     print.appendChild(memo);   
-                    bubble.appendChild(pic);
-                    bubble.appendChild(print);
-                    chatter.appendChild(bubble);
-                    parent.appendChild(chatter);
+                    chatter.appendChild(pic);
+                    chatter.appendChild(print);
+                    bubble.appendChild(chatter);
+                    parent.appendChild(bubble);
                    
                  //////  This section for frills.
                     if (text.user === 'Andrew' || text.user === 'Brad') { 
-                        chatter.classList.add('left');
-                        bubble.classList.add('light');
+                        bubble.classList.add('left');
+                        chatter.classList.add('light');
                     } else { 
-                        chatter.classList.add('right');
-                        bubble.classList.add('dark');
+                        bubble.classList.add('right');
+                        chatter.classList.add('dark');
                     } // <== END Left Justify Class Tags for Username
                     if (text.user === '') {
                         name.textContent = 'Anonymous says...';
