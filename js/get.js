@@ -3,6 +3,7 @@ module.exports = function getMsgs() {
 
    var tmStmp  = require('./tmStmp');
    var link    = require('./link');
+   var weather = require('./weather'); 
    var rand    = require('./rand');
    var count = 0; // counter for getRequest.onload()
    var parent = document.getElementById('parlance'); //Messages HTML Parent
@@ -31,7 +32,10 @@ module.exports = function getMsgs() {
                     var pic = document.createElement('img');
                     pic.src = img.results[0].user.picture.medium;
                     //console.log(pic.src);
-                
+                   
+                    // if key phrase invoked in message -   call weather
+                    weather.callWeather(text.message);
+                   
                     name.textContent = text.user + '  says...';// Insert of link recognize and replace function.
                     memo.innerHTML = link.generateLink(text.message);// Insert of timestamp function.
                     tmstmp.textContent = tmStmp.setTmStmp(text.when);
