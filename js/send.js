@@ -1,4 +1,3 @@
-
 module.exports = function sendMsg() {
 
    var requestPOST = new XMLHttpRequest();
